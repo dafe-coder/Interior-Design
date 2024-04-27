@@ -1,0 +1,17 @@
+{
+	"name": "interior_design",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "npx tailwindcss -i ./main.css -o ./dist/output.css --watch"
+	},
+	"author": "dafe_coder",
+	"license": "ISC",
+	"dependencies": {
+		"tailwind": "^4.0.0"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.19"
+	}
+}
