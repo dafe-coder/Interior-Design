@@ -8,6 +8,9 @@ module.exports = {
 	theme: {
 		container: {
 			center: true,
+			screens: {
+				'2xl': '1640px',
+			},
 		},
 		fontSize: {
 			...defaultTheme.fontSize,
@@ -17,6 +20,7 @@ module.exports = {
 				kitchen: "url('/src/images/kitchen.png')",
 			},
 			spacing: {
+				13: '3.125rem', // 50px
 				17: '4.375rem', // 70px
 				25: '6.25rem', // 100px
 				37: '9.375rem', // 150px
@@ -40,7 +44,8 @@ module.exports = {
 			gray: {
 				...colors.gray,
 				200: '#E0EAEB',
-				300: '#959595',
+				300: '#B9C4C5',
+				400: '#959595',
 				500: '#4A4A4A',
 			},
 			apricot: {
