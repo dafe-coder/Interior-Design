@@ -11,6 +11,13 @@ module.exports = {
 			screens: {
 				'2xl': '1640px',
 			},
+			padding: {
+				DEFAULT: '1rem',
+				sm: '2rem',
+				lg: '4rem',
+				xl: '5rem',
+				'2xl': '4.375rem',
+			},
 		},
 		fontSize: {
 			...defaultTheme.fontSize,
@@ -77,7 +84,9 @@ module.exports = {
 				'.button-primary': {
 					display: 'flex',
 					alignItems: 'center',
+					justifyContent: 'center',
 					height: '3.625rem',
+					minWidth: '17.375rem',
 					fontSize: '1.4375rem',
 					fontWeight: '500',
 					padding: '0 2%',
@@ -90,6 +99,46 @@ module.exports = {
 					minHeight: '12.5rem',
 					paddingLeft: '4.875rem',
 					position: 'relative',
+					'&::after': {
+						content: '""',
+						width: '1px',
+						height: 'calc(100% - 54px)',
+						backgroundColor: theme('colors.green[300]'),
+						position: 'absolute',
+						bottom: 0,
+						left: '1.25rem',
+					},
+					'&::before': {
+						content: '""',
+						width: '2.5rem',
+						height: '2.5rem',
+						backgroundColor: theme('colors.green[300]'),
+						borderRadius: '9999px',
+						position: 'absolute',
+						top: 0,
+						left: 0,
+					},
+					'&:last-child': {
+						'&::after': {
+							display: 'none',
+						},
+					},
+				},
+				'.input': {
+					fontSize: '1.25rem',
+					color: theme('colors.gray[500]'),
+					outline: 'none',
+					borderRadius: '1.875rem',
+					backgroundColor: 'transparent',
+					fontWeight: 500,
+					padding: '0 0.875rem',
+					height: '4.125rem',
+					border: `1px solid ${theme('colors.gray[500]')}`,
+					'::placeholder': {
+						display: 'none',
+						fontSize: '1.25rem',
+						color: theme('colors.gray[500]'),
+					},
 				},
 			})
 			addBase({
@@ -110,7 +159,22 @@ module.exports = {
 					lineHeight: '3.4688rem',
 					fontWeight: '500',
 					letterSpacing: '1%',
-					color: theme('colors.gray[200]'),
+					color: theme('colors.gray[300]'),
+				},
+				h5: {
+					fontSize: '2.5rem',
+					lineHeight: '2.0625rem',
+					fontWeight: '900',
+					letterSpacing: '1%',
+					color: theme('colors.gray[300]'),
+				},
+				h6: {
+					fontSize: '1.875rem',
+					lineHeight: '2.125rem',
+					marginBottom: '10px',
+					fontWeight: '700',
+					letterSpacing: '1%',
+					color: theme('colors.gray[300]'),
 				},
 			})
 		}),

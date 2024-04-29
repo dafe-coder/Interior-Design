@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "npx tailwindcss -i ./main.css -o ./dist/output1.css --watch"
+		"build": "npx tailwindcss -i ./main.css -o ./dist/output2.css --watch"
 	},
 	"author": "dafe_coder",
 	"license": "ISC",
