@@ -6,16 +6,22 @@ const plugin = require('tailwindcss/plugin')
 module.exports = {
 	future: {},
 	theme: {
+		screens: {
+			...defaultTheme.screens,
+			xs: '480px', // phones
+			xxl: '1480px', // laptop
+		},
 		container: {
 			center: true,
 			screens: {
-				'2xl': '1640px',
+				'2xl': '1640px', // container width
 			},
 			padding: {
-				DEFAULT: '1rem',
+				DEFAULT: '36px',
+				xs: '2rem',
 				sm: '2rem',
 				lg: '4rem',
-				xl: '5rem',
+				xl: '3.125rem',
 				'2xl': '4.375rem',
 			},
 		},
@@ -70,6 +76,7 @@ module.exports = {
 	plugins: [
 		require('tailwindcss'),
 		require('autoprefixer'),
+		require('tailwind-hamburgers'),
 		plugin(function ({ addComponents, addBase, theme }) {
 			addComponents({
 				'.tag': {
@@ -82,6 +89,18 @@ module.exports = {
 					fontWeight: '600',
 					fontSize: '1.25rem',
 					letterSpacing: '1px',
+					'@media not all and (min-width: 1480px)': {
+						fontSize: '1rem',
+						padding: '0 12px',
+						height: '2.875rem',
+					},
+					'@media not all and (min-width: 480px)': {
+						letterSpacing: '0%',
+						fontSize: '10px',
+						padding: '0 8px',
+						height: '27px',
+						borderRadius: '5px',
+					},
 				},
 				'.button-primary': {
 					display: 'flex',
@@ -96,11 +115,38 @@ module.exports = {
 					border: `1px solid ${theme('colors.white')}`,
 					borderRadius: '1.875rem',
 					backgroundColor: theme('colors.apricot[400]'),
+					'@media not all and (min-width: 1480px)': {
+						height: '3rem',
+						fontSize: '1.125rem',
+					},
 				},
 				'.list-decor-item': {
 					minHeight: '12.5rem',
 					paddingLeft: '4.875rem',
 					position: 'relative',
+					color: theme('colors.gray[300]'),
+					'@media not all and (min-width: 480px)': {
+						minHeight: '8.5rem',
+					},
+					'>strong': {
+						fontSize: '1.5rem',
+						fontWeight: 700,
+						lineHeight: '2.0625rem',
+						marginBottom: '0.875rem',
+						display: 'block',
+						'@media not all and (min-width: 480px)': {
+							fontSize: '1.25rem',
+							lineHeight: '2.0625rem',
+						},
+					},
+					'>p': {
+						fontSize: '1.25rem',
+						lineHeight: '2.0625rem',
+						'@media not all and (min-width: 480px)': {
+							fontSize: '1rem',
+							lineHeight: '1rem',
+						},
+					},
 					'&::after': {
 						content: '""',
 						width: '1px',
@@ -136,10 +182,18 @@ module.exports = {
 					padding: '0 0.875rem',
 					height: '4.125rem',
 					border: `1px solid ${theme('colors.gray[500]')}`,
-					'::placeholder': {
+					'@media not all and (min-width: 480px)': {
+						fontSize: '14px',
+						height: '34px',
+						width: '184px',
+					},
+					'&::placeholder': {
 						display: 'none',
 						fontSize: '1.25rem',
 						color: theme('colors.gray[500]'),
+						'@media not all and (min-width: 480px)': {
+							fontSize: '14px',
+						},
 					},
 				},
 				'.footer-nav': {
@@ -149,8 +203,19 @@ module.exports = {
 						marginBottom: '1.875rem',
 						paddingBottom: '1.4375rem',
 						minHeight: '127px',
+						'@media not all and (min-width: 1480px)': {
+							flexBasis: '50%',
+						},
+						'@media not all and (min-width: 480px)': {
+							'&:nth-child(even)': {
+								borderLeft: 'none',
+							},
+						},
 						'> *': {
 							marginBottom: '0.3125rem',
+							'@media not all and (min-width: 480px)': {
+								marginBottom: '10px',
+							},
 						},
 						'> li': {
 							paddingLeft: '1.25rem',
@@ -158,8 +223,15 @@ module.exports = {
 							lineHeight: '1.25rem',
 							fontWeight: 500,
 							color: theme('colors.gray[300]'),
+							'@media not all and (min-width: 480px)': {
+								fontSize: '16px',
+								lineHeight: '14px',
+							},
 							'> a': {
 								color: theme('colors.gray[500]'),
+								'@media not all and (min-width: 480px)': {
+									fontSize: '14px',
+								},
 							},
 						},
 					},
@@ -177,6 +249,20 @@ module.exports = {
 					lineHeight: '4.2625rem',
 					fontWeight: '500',
 					color: theme('colors.gray[200]'),
+					'@media not all and (min-width: 1480px)': {
+						fontSize: '3.3125rem',
+						lineHeight: '3.6375rem',
+					},
+					'@media not all and (min-width: 1024px)': {
+						fontSize: '2.25rem',
+						lineHeight: '3.0125rem',
+					},
+					'@media not all and (min-width: 768px)': {
+						fontSize: '22px',
+						fontWeight: 500,
+						lineHeight: '25px',
+						letterSpacing: '0%',
+					},
 				},
 				h3: {
 					fontSize: '3.125rem',
@@ -184,6 +270,20 @@ module.exports = {
 					fontWeight: '500',
 					letterSpacing: '1%',
 					color: theme('colors.gray[300]'),
+					'@media not all and (min-width: 1480px)': {
+						fontSize: '2.8438rem',
+						lineHeight: '3.1563rem',
+					},
+					'@media not all and (min-width: 1024px)': {
+						fontSize: '2.25rem',
+						lineHeight: '3.0125rem',
+					},
+					'@media not all and (min-width: 768px)': {
+						fontSize: '22px',
+						fontWeight: 500,
+						lineHeight: '25px',
+						letterSpacing: '0%',
+					},
 				},
 				h5: {
 					fontSize: '2.5rem',
@@ -191,6 +291,10 @@ module.exports = {
 					fontWeight: '900',
 					letterSpacing: '1%',
 					color: theme('colors.gray[300]'),
+					'@media not all and (min-width: 480px)': {
+						fontSize: '22px',
+						lineHeight: '25px',
+					},
 				},
 				h6: {
 					fontSize: '1.875rem',
@@ -199,6 +303,10 @@ module.exports = {
 					fontWeight: '700',
 					letterSpacing: '1%',
 					color: theme('colors.gray[300]'),
+					'@media not all and (min-width: 480px)': {
+						fontSize: '22px',
+						lineHeight: '25px',
+					},
 				},
 			})
 		}),

@@ -13,11 +13,25 @@
 		<link rel="stylesheet" href="./dist/output3.css" />
 	</head>
 	<body class="bg-green-600 text-white overflow-x-clip">
-		<div class="flex">
+		<div class="flex max-lg:flex-wrap">
+			<!-- HEADER Only Phones -->
 			<div
-				class="flex flex-col h-screen sticky top-0 w-[17.5rem] bg-white text-gray-450 pb-11"
+				class="hidden bg-white h-20 p-7 w-full items-center justify-between max-lg:flex"
 			>
-				<div class="flex flex-col pl-9 flex-1 overflow-scroll pt-11">
+				<div>
+					<a href="/" class="text-sm font-bold text-gray-450">LOGO HERE</a>
+				</div>
+				<div class="tham tham-e-squeeze tham-w-6">
+					<div class="tham-box">
+						<div class="tham-inner"></div>
+					</div>
+				</div>
+			</div>
+			<!-- SIDEBAR -->
+			<div
+				class="flex flex-shrink-0 flex-col h-screen sticky top-0 w-64 bg-white text-gray-450 pb-11 max-lg:hidden"
+			>
+				<div class="flex flex-col pl-9 flex-1 pt-11">
 					<div class="mb-11">
 						<a href="#" class="font-bold">LOGO HERE</a>
 					</div>
@@ -88,415 +102,481 @@
 					</ul>
 				</div>
 			</div>
-			<div class="container">
-				<section class="pt-[9.1875rem] pb-[2rem]">
-					<div class="flex items-start">
-						<div class="max-w-[45.9375rem] w-full pb-28">
-							<h1 class="text-center max-w-max pl-13">
-								Stilul Tău,<br />
-								Povestea Ta.
-							</h1>
-							<p class="text-xl font-medium text-center pt-8">
-								Acum ai acces gratuit la cele mai bune oferte pentru design
-								interior și arhitectură. Alege tipul de serviciu sau spațiu pe
-								care dorești să-l amenajezi
-							</p>
-							<div class="max-w-[39.5625rem]">
-								<ul
-									class="flex flex-wrap justify-center gap-x-8 gap-y-4 pt-[88px]"
+			<!-- MAIN CONTENT -->
+			<div class="max-sm:overflow-x-hidden">
+				<div class="container">
+					<section class="pt-[9.1875rem] pb-[2rem] max-xxl:pt-20">
+						<div class="flex items-start max-sm:flex-wrap">
+							<div class="max-w-[45.9375rem] w-full pb-28 max-sm:pb-9">
+								<h1
+									class="text-center max-w-max ml-13 max-xxl:text-7xl max-xl:text-5xl max-xl:mx-auto max-xs:text-4xl"
 								>
-									<li class="tag">Design de interior</li>
-									<li class="tag">Arhitectură</li>
-									<li class="tag">Peisagistică</li>
-									<li class="tag">Spațiu comercial</li>
-									<li class="tag">Locuință</li>
-									<li class="tag">Mobilier pe comandă</li>
-								</ul>
-								<button class="button-primary mt-17 ml-[160px] px-13">
-									Adaugă proiectul tău
-								</button>
+									Stilul Tău,<br />
+									Povestea Ta.
+								</h1>
+								<p
+									class="text-xl font-medium text-center pt-8 max-xxl:text-lg max-xl:text-base max-sm:text-sm"
+								>
+									Acum ai acces gratuit la cele mai bune oferte pentru design
+									interior și arhitectură. Alege tipul de serviciu sau spațiu pe
+									care dorești să-l amenajezi
+								</p>
+								<!-- image for mobile only -->
+								<div
+									class="hidden relative h-[310px] mt-5 mx-auto max-md:block"
+								>
+									<img
+										class="-z-0 absolute top-1/2 left-[55%] transform -translate-x-1/2 -translate-y-1/2 w-[430px] max-w-[430px]"
+										src="/src/images/kitchen-mob.png"
+										alt="kitchen"
+									/>
+								</div>
+								<!--end  image for mobile only -->
+								<div class="max-w-[39.5625rem]">
+									<ul
+										class="flex flex-wrap justify-center gap-x-8 gap-y-4 pt-[5.5rem] max-xxl:pt-13 max-sm:pt-9 max-xs:gap-x-4 max-sm:gap-y-4 max-xs:gap-y-2"
+									>
+										<li class="tag">Design de interior</li>
+										<li class="tag">Arhitectură</li>
+										<li class="tag">Peisagistică</li>
+										<li class="tag">Spațiu comercial</li>
+										<li class="tag">Locuință</li>
+										<li class="tag">Mobilier pe comandă</li>
+									</ul>
+									<button
+										class="button-primary mt-17 ml-[10rem] px-13 max-xxl:mx-auto max-sm:mt-7"
+									>
+										Adaugă proiectul tău
+									</button>
+								</div>
+							</div>
+							<div class="relative -top-20 max-xxl:top-auto max-md:hidden">
+								<img src="/src/images/kitchen.png" alt="kitchen" />
 							</div>
 						</div>
-						<div class="relative -top-20">
-							<img src="/src/images/kitchen.png" alt="kitchen" />
-						</div>
-					</div>
-				</section>
-				<section class="pb-36">
-					<h2>
-						Descoperă specialistul preferat <br />
-						pentru spațiul mult visat
-					</h2>
-					<ul class="flex justify-between mt-16 gap-20">
-						<li class="w-1/3 border-t border-green-200">
-							<p class="flex items-center gap-2.5 py-8 text-2xl font-semibold">
-								<img src="/src/images/svg/link.svg" alt="link" />
-								Designeri de top
-							</p>
-							<p class="text-lg">
-								Platforma noastră te poate ajuta să gasești designeri și
-								arhitecți cu experiență care își pot aduce viziunea la viață.
-							</p>
-						</li>
-						<li class="w-1/3 border-t border-green-200">
-							<p class="flex items-center gap-2.5 py-8 text-2xl font-semibold">
-								<img src="/src/images/svg/star.svg" alt="star" />
-								Servicii profesionale
-							</p>
-							<p class="text-lg">
-								Începe proiectul de design interior astăzi și colaborează cu
-								designeri și arhitecți talentați care vor crea un spațiu pe care
-								îl vei iubi.
-							</p>
-						</li>
-						<li class="w-1/3 border-t border-green-200">
-							<p class="flex items-center gap-2.5 py-8 text-2xl font-semibold">
-								<img
-									src="/src/images/svg/check-circle.svg"
-									alt="check circle"
-								/>
-								Soluții excepționale
-							</p>
-							<p class="text-lg">
-								Găsește designerul perfect care va înțelege stilul tău unic și
-								îți va oferi soluții de design personalizate.
-							</p>
-						</li>
-					</ul>
-				</section>
-				<section class="flex pb-28">
-					<div>
-						<img src="/src/images/living-room.png" alt="living room" />
-					</div>
-					<div class="max-w-[47.8125rem] ml-auto pt-28">
-						<h3>
-							Transformă-ți spațiul împreună cu membri comunității noastre
-							online
-						</h3>
-						<p class="text-gray-200 mt-16 text-2xl">
-							Află combinația perfectă de stil și funcționalitate cu echipa
-							COMPANY NAME de designeri de interior experți. Comunitatea noastră
-							online este dedicată înțelegerii nevoilor și preferințelor tale
-							unice, creând soluții personalizate care să îți aducă viziunea la
-							viață.
-						</p>
-					</div>
-				</section>
-				<section class="pb-[11.25rem] flex">
-					<div class="max-w-[47.8125rem] mt-14">
-						<h3>Beneficiile platformei noastre online de design interior</h3>
-						<p class="text-gray-200 mt-16 text-2xl">
-							Platforma noastră oferă numeroase avantaje atât pentru clienți,
-							cât și pentru profesioniști. Pentru clienți, oferă acces la o gamă
-							largă de designeri talentați, arhitecți și producători de mobilier
-							la comandă.
-							<br />Profesioniștii beneficiază de vizibilitate sporită și de
-							oportunitatea de a intra în legătură cu potențiali clienți.
-						</p>
-						<ul class="mt-25 text-gray-200 tracking-[1%] text-2xl space-y-2.5">
-							<li>+ Acces la designeri și arhitecți de top</li>
-							<li>+ Te conectezi cu producătorii de mobilă la comandă</li>
-							<li>
-								+ Vizibilitate sporită pentru profesioniștii din industrie
+					</section>
+					<section class="pb-36 max-xl:pb-20 max-md:pb-10">
+						<h2>
+							Descoperă specialistul preferat <br />
+							pentru spațiul mult visat
+						</h2>
+						<ul
+							class="flex justify-between mt-16 gap-20 max-lg:flex-wrap max-md:gap-5 max-md:mt-8"
+						>
+							<li class="w-1/3 border-t border-green-200 max-lg:w-full">
+								<p
+									class="flex items-center gap-2.5 py-8 text-2xl font-semibold max-md:text-lg max-sm:pb-2 max-sm:pt-4"
+								>
+									<img src="/src/images/svg/link.svg" alt="link" />
+									Designeri de top
+								</p>
+								<p class="text-lg max-sm:text-sm">
+									Platforma noastră te poate ajuta să gasești designeri și
+									arhitecți cu experiență care își pot aduce viziunea la viață.
+								</p>
+							</li>
+							<li class="w-1/3 border-t border-green-200 max-lg:w-full">
+								<p
+									class="flex items-center gap-2.5 py-8 text-2xl font-semibold max-md:text-lg max-sm:pb-2 max-sm:pt-4"
+								>
+									<img src="/src/images/svg/star.svg" alt="star" />
+									Servicii profesionale
+								</p>
+								<p class="text-lg max-sm:text-sm">
+									Începe proiectul de design interior astăzi și colaborează cu
+									designeri și arhitecți talentați care vor crea un spațiu pe
+									care îl vei iubi.
+								</p>
+							</li>
+							<li class="w-1/3 border-t border-green-200 max-lg:w-full">
+								<p
+									class="flex items-center gap-2.5 py-8 text-2xl font-semibold max-md:text-lg max-sm:pb-2 max-sm:pt-4"
+								>
+									<img
+										src="/src/images/svg/check-circle.svg"
+										alt="check circle"
+									/>
+									Soluții excepționale
+								</p>
+								<p class="text-lg max-sm:text-sm">
+									Găsește designerul perfect care va înțelege stilul tău unic și
+									îți va oferi soluții de design personalizate.
+								</p>
 							</li>
 						</ul>
-					</div>
-					<div class="ml-10">
-						<img src="/src/images/bedroom.png" alt="bedroom" />
-					</div>
-				</section>
-
-				<section>
-					<div class="flex justify-between">
-						<div class="relative max-w-[43.125rem] flex-shrink-0">
-							<h3>
-								Pas cu pas, de la înregistrare la transformarea uimitoare a
-								spațiului tău
-							</h3>
-							<button class="button-primary mt-17 px-13">
-								Adaugă proiectul tău
-							</button>
-							<img
-								class="absolute bottom-16 -left-[40%]"
-								src="/src/images/ellipse-bg.png"
-								alt="ellipse bg"
-							/>
+					</section>
+					<section class="flex pb-28 max-md:flex-wrap max-md:pb-20">
+						<div
+							class="max-xxl:basis-1/2 max-xxl:flex-shrink-0 max-xl:flex max-xl:items-center max-md:mx-auto max-md:basis-full"
+						>
+							<img src="/src/images/living-room.png" alt="living room" />
 						</div>
-						<div class="max-w-[41.25rem] ml-25">
-							<ul class="space-y-3.5">
-								<li class="list-decor-item">
-									<p class="text-gray-200 mb-6 text-2xl font-bold">Pasul 1</p>
-									<p class="text-gray-200 text-xl">
-										Crează un cont și menționează preterințele tale de design.
+						<div
+							class="flex-grow-0 max-w-[47.8125rem] ml-auto pt-28 max-xxl:ml-10 max-xxl:pt-20 max-md:pt-10 max-md:ml-0"
+						>
+							<h3>
+								Transformă-ți spațiul împreună cu membri comunității noastre
+								online
+							</h3>
+							<p
+								class="text-gray-200 mt-16 text-2xl max-xl:text-xl max-xl:mt-12 max-md:mt-6 max-sm:text-xs"
+							>
+								Află combinația perfectă de stil și funcționalitate cu echipa
+								COMPANY NAME de designeri de interior experți. Comunitatea
+								noastră online este dedicată înțelegerii nevoilor și
+								preferințelor tale unice, creând soluții personalizate care să
+								îți aducă viziunea la viață.
+							</p>
+						</div>
+					</section>
+					<section class="pb-[11.25rem] flex max-md:flex-wrap max-md:pb-20">
+						<div class="max-w-[47.8125rem] pt-14 max-md:order-2 max-md:pt-10">
+							<h3>Beneficiile platformei noastre online de design interior</h3>
+							<p
+								class="text-gray-200 mt-16 text-2xl max-xl:text-xl max-xl:mt-12 max-md:mt-6 max-sm:text-xs"
+							>
+								Platforma noastră oferă numeroase avantaje atât pentru clienți,
+								cât și pentru profesioniști. Pentru clienți, oferă acces la o
+								gamă largă de designeri talentați, arhitecți și producători de
+								mobilier la comandă.
+								<br />Profesioniștii beneficiază de vizibilitate sporită și de
+								oportunitatea de a intra în legătură cu potențiali clienți.
+							</p>
+							<ul
+								class="mt-25 text-gray-200 tracking-[1%] text-2xl space-y-2.5 max-xl:text-xl max-xl:mt-12 max-md:mt-6 max-sm:text-xs"
+							>
+								<li>+ Acces la designeri și arhitecți de top</li>
+								<li>+ Te conectezi cu producătorii de mobilă la comandă</li>
+								<li>
+									+ Vizibilitate sporită pentru profesioniștii din industrie
+								</li>
+							</ul>
+						</div>
+						<div
+							class="ml-10 max-xxl:basis-1/2 max-xxl:flex-shrink-0 max-xl:flex max-xl:items-center max-md:order-1 max-md:mx-auto max-md:basis-full"
+						>
+							<img src="/src/images/bedroom.png" alt="bedroom" />
+						</div>
+					</section>
+					<section>
+						<div class="flex relative justify-between max-md:flex-wrap">
+							<div class="max-w-[43.125rem] flex-shrink-0 max-xxl:flex-shrink">
+								<h3>
+									Pas cu pas, de la înregistrare la transformarea uimitoare a
+									spațiului tău
+								</h3>
+								<button
+									class="button-primary mt-17 px-13 max-md:mt-10 max-md:mb-12"
+								>
+									Adaugă proiectul tău
+								</button>
+								<img
+									class="absolute bottom-16 -left-[40%]"
+									src="/src/images/ellipse-bg.png"
+									alt="ellipse bg"
+								/>
+							</div>
+							<div class="max-w-[41.25rem] ml-25 max-xxl:ml-10 max-md:ml-0">
+								<ul class="space-y-3.5">
+									<li class="list-decor-item">
+										<strong>Pasul 1</strong>
+										<p>
+											Crează un cont și menționează preterințele tale de design.
+										</p>
+									</li>
+									<li class="list-decor-item">
+										<strong>Pasul 2</strong>
+										<p>
+											Alege din ofertele profesioniștilor noștri din comunitate,
+											pentru a aduce viziunea ta la realitate
+										</p>
+									</li>
+									<li class="list-decor-item">
+										<strong>Pasul 2</strong>
+										<p>Colaborează și aprobă propunerile specialistului ales</p>
+									</li>
+									<li class="list-decor-item">
+										<strong>Pasul 4</strong>
+										<p>Trăiește emoția descoperirii noului tău spațiu</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section class="flex pt-20 pb-17 max-md:hidden">
+						<div class="w-1/3 flex flex-col items-center">
+							<div
+								class="flex items-center justify-center size-[17.9375rem] rounded-full border-[35px] border-green-500 text-6xl font-bold text-gray-300 max-xxl:size-[200px] max-xxl:border-[20px]"
+							>
+								<span>99</span>
+							</div>
+							<div class="text-gray-300 font-bold text-3xl mt-11 text-center">
+								Cereri de oferte
+							</div>
+						</div>
+						<div class="w-1/3 flex flex-col items-center">
+							<div
+								class="flex items-center justify-center size-[17.9375rem] rounded-full border-[35px] border-green-500 text-6xl font-bold text-gray-300 max-xxl:size-[200px] max-xxl:border-[20px]"
+							>
+								<span>99</span>
+							</div>
+							<div class="text-gray-300 font-bold text-3xl mt-11 text-center">
+								Profesioniști <br />
+								inscriși
+							</div>
+						</div>
+						<div class="w-1/3 flex flex-col items-center">
+							<div
+								class="flex items-center justify-center size-[17.9375rem] rounded-full border-[35px] border-green-500 text-6xl font-bold text-gray-300 max-xxl:size-[200px] max-xxl:border-[20px]"
+							>
+								<span>99</span>
+							</div>
+							<div class="text-gray-300 font-bold text-3xl mt-11 text-center">
+								Oferte<br />
+								acceptate
+							</div>
+						</div>
+					</section>
+					<section
+						class="flex pt-32 pb-28 max-md:flex-wrap max-md:pb-20 max-md:pt-10 max-sm:pb-14 max-md:hidden"
+					>
+						<div
+							class="max-w-[39.0625rem] text-lg/6 max-md:order-2 max-sm:text-xs"
+						>
+							<div class="mb-24 max-md:mb-16">
+								<h6>Pentru designeri de interior si arhitecti</h6>
+								<div class="space-y-5 max-xs:space-y-3">
+									<p>
+										Comunicare eficientă cu clienții, furnizorii și alte părți
+										implicate în proiect.
+									</p>
+									<p>
+										Oportunități de a intra în legătură cu potențiali clienți,
+										furnizori și alți profesioniști din industrie.
+									</p>
+									<p>
+										Eliminarea provocările de comunicare și interpretările
+										greșite dintre clienți și alte părți interesate ale
+										proiectului
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6>Pentru furnizori de mobilier la comandă</h6>
+								<div class="space-y-5 max-xs:space-y-3">
+									<p>
+										Oportunitatea de a prezenta portofoliul și pentru a atrage
+										mai mulți potențiali clienți
+									</p>
+									<p>
+										Instrument de colaborare pentru comunicarea cu clienții și
+										designerii pentru a înțelege cerințele și preferințele
+										acestora
+									</p>
+									<p>
+										Găsirea unui echilibru între personalizare și scalabilitate
+										în procesele de producție
+									</p>
+								</div>
+							</div>
+							<button
+								class="button-primary px-5 mt-36 text-xl max-md:mx-auto max-md:mt-16 max-sm:mt-10"
+							>
+								Înregistrează-te ca profesionist
+							</button>
+						</div>
+						<div
+							class="ml-40 pt-20 max-xxl:basis-1/2 max-xxl:flex-shrink-0 max-xl:flex max-xl:items-center max-xxl:ml-10 max-xxl:pt-0 max-md:order-1 max-md:mx-auto max-md:basis-full max-md:mb-10"
+						>
+							<img src="/src/images/living-room-2.png" alt="living room 2" />
+						</div>
+					</section>
+					<section class="pt-7 pb-40 relative max-sm:pb-10">
+						<img
+							class="absolute -bottom-32 -right-96 -z-10"
+							src="/src/images/Ellipse-bg-contact.png"
+							alt="ellipse bg contact"
+						/>
+						<p class="text-2xl text-gray-300 max-w-[61.875rem] max-sm:text-xl">
+							Răspunsuri la întrebările frecvente despre procesul de proiectare,
+							utilizarea platformei și metodele de colaborare.
+						</p>
+						<div class="mt-20 max-md:mt-12">
+							<ul
+								class="mb-10 border-b-[0.5px] border-green-200 text-gray-300 text-2xl tracking-[1px] max-sm:text-xl/5"
+							>
+								<li class="py-8 border-t-[0.5px] border-green-200 max-sm:py-4">
+									<p class="font-black mb-4 max-sm:mb-2">Cum funcționează ?</p>
+									<p class="max-sm:text-xs">
+										Platforma noastră vă pune în legătură cu designeri,
+										arhitecți și producători de mobilier la comandă cu
+										experiență. Puteți să răsfoiți portofoliile acestora, să
+										comunicați preferințele dvs. de design și să colaborați la
+										proiectul dvs. de renovare a spațiului rezidențial sau
+										comercial.
 									</p>
 								</li>
-								<li class="list-decor-item">
-									<p class="text-gray-200 mb-6 text-2xl font-bold">Pasul 2</p>
-									<p class="text-gray-200 text-xl">
-										Alege din ofertele profesioniștilor noștri din comunitate,
-										pentru a aduce viziunea ta la realitate
+								<li class="py-8 border-t-[0.5px] border-green-200 max-sm:py-4">
+									<p class="font-black mb-4 max-sm:mb-2">
+										Cum încep colaborarea ?
+									</p>
+									<p class="max-sm:text-xs">
+										Pentru a începe, pur și simplu creați un cont pe platforma
+										noastră. Odată ce v-ați înscris, și ai plasat cererea pentru
+										ofertă, puteți explora designerii și arhitecții disponibili,
+										puteți vedea proiectele lor anterioare și puteți începe să
+										colaborați la propriul proiect de design.
 									</p>
 								</li>
-								<li class="list-decor-item">
-									<p class="text-gray-200 mb-6 text-2xl font-bold">Pasul 2</p>
-									<p class="text-gray-200 text-xl">
-										Colaborează și aprobă propunerile specialistului ales
+								<li class="py-8 border-t-[0.5px] border-green-200 max-sm:py-4">
+									<p class="font-black mb-4 max-sm:mb-2">
+										Care este durata procesului de design/arhitectură/producție
+										mobilier ?
+									</p>
+									<p class="max-sm:text-xs">
+										Durata proiectului dvs. va depinde de diverși factori,
+										inclusiv complexitatea designului, domeniul de activitate
+										<br />și disponibilitatea designerilor. În timpul procesului
+										de colaborare, puteți discuta despre termeni și alte repere
+										cu profesionistul ales.
 									</p>
 								</li>
-								<li class="list-decor-item">
-									<p class="text-gray-200 mb-6 text-2xl font-bold">Pasul 4</p>
-									<p class="text-gray-200 text-xl">
-										Trăiește emoția descoperirii noului tău spațiu
+								<li class="py-8 border-t-[0.5px] border-green-200 max-sm:py-4">
+									<p class="font-black mb-4 max-sm:mb-2">Cât costă ?</p>
+									<p class="max-sm:text-xs">
+										Crearea contului si inscrierea proiectului, sunt gratuite.
+										Costul realizării proiectului dumneavoastră va varia în
+										funcție de mărimea și complexitatea amenajării, precum și de
+										tarifele profesioniștilor. Puteți discuta detaliile privind
+										prețurile și considerațiile bugetare direct cu
+										profesioniștii cu care alegeți să lucrați.
 									</p>
+								</li>
+							</ul>
+							<h5 class="mb-6 max-sm:mb-3">Ai și alte intrebări?</h5>
+							<p class="text-2xl text-gray-300 font-medium max-sm:text-xl/5">
+								Contactează-ne pentru asistență suplimentară
+							</p>
+							<button class="button-primary mt-10">Contact</button>
+						</div>
+					</section>
+				</div>
+				<!-- FOOTER -->
+				<footer class="bg-brown-500 pt-3.5">
+					<div class="container flex max-lg:flex-wrap">
+						<div class="pt-6 mr-16">
+							<p
+								class="max-w-[20.625rem] text-gray-300 text-lg/5 tracking-[1px]"
+							>
+								Abonează-te la newsletter-ul nostru, pentru știri despre design
+								și producători din întreaga lume
+							</p>
+							<form
+								class="mt-13 flex flex-wrap max-w-[278px] max-xs:mt-2.5"
+								action="#"
+							>
+								<input
+									required
+									type="email"
+									class="input basis-full"
+									placeholder="Adresa ta de e-mail"
+								/>
+								<div class="basis-full flex justify-end mt-17">
+									<button class="p-3">
+										<img
+											src="/src/images/svg/arrow-right.svg"
+											alt="Send email"
+										/>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div
+							class="footer-nav flex flex-wrap max-w-[46.25rem] ml-auto max-lg:ml-0 max-lg:mt-8"
+						>
+							<ul class="pt-3">
+								<li>Pentru designeri</li>
+								<li>
+									<a href="#">Despre noi</a>
+								</li>
+								<li>
+									<a href="#">Contact</a>
+								</li>
+							</ul>
+							<ul class="pt-3">
+								<li>Social Media</li>
+								<li>
+									<a href="#">Facebook</a>
+								</li>
+								<li>
+									<a href="#">Instagram</a>
+								</li>
+								<li>
+									<a href="#">Linkedin </a>
+								</li>
+							</ul>
+							<ul class="pt-3 max-xxl:pt-0">
+								<li>Companie</li>
+								<li>
+									<a href="#">Despre noi</a>
+								</li>
+								<li>
+									<a href="#"> Contact </a>
+								</li>
+								<li>
+									<a href="#">Termeni si condiții</a>
+								</li>
+								<li>
+									<a href="#">Politica de confidențialitate</a>
+								</li>
+								<li>
+									<a href="#">A.N.P.C. - SAL</a>
+								</li>
+								<li>
+									<a href="#">ODR</a>
+								</li>
+								<li>
+									<a href="#">GDPR</a>
+								</li>
+							</ul>
+							<ul>
+								<li>Pentru furnizori</li>
+								<li>
+									<a href="#">Despre noi</a>
+								</li>
+								<li>
+									<a href="#">Contact</a>
+								</li>
+							</ul>
+							<ul>
+								<li>Noutăți</li>
+								<li>
+									<a href="#">Actualizări </a>
+								</li>
+								<li>
+									<a href="#">Blog</a>
+								</li>
+							</ul>
+							<ul>
+								<li>Resurse</li>
+								<li>
+									<a href="#">Despre noi</a>
+								</li>
+								<li>
+									<a href="#">Contact</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-				</section>
-
-				<section class="flex pt-20 pb-17">
-					<div class="w-1/3 flex flex-col items-center">
-						<div
-							class="flex items-center justify-center w-[287px] h-[287px] rounded-full border-[35px] border-green-500 text-6xl font-bold text-gray-300"
-						>
-							<span>99</span>
-						</div>
-						<div class="text-gray-300 font-bold text-3xl mt-11 text-center">
-							Cereri de oferte
-						</div>
-					</div>
-					<div class="w-1/3 flex flex-col items-center">
-						<div
-							class="flex items-center justify-center w-[287px] h-[287px] rounded-full border-[35px] border-green-500 text-6xl font-bold text-gray-300"
-						>
-							<span>99</span>
-						</div>
-						<div class="text-gray-300 font-bold text-3xl mt-11 text-center">
-							Profesioniști <br />
-							inscriși
-						</div>
-					</div>
-					<div class="w-1/3 flex flex-col items-center">
-						<div
-							class="flex items-center justify-center w-[287px] h-[287px] rounded-full border-[35px] border-green-500 text-6xl font-bold text-gray-300"
-						>
-							<span>99</span>
-						</div>
-						<div class="text-gray-300 font-bold text-3xl mt-11 text-center">
-							Oferte<br />
-							acceptate
-						</div>
-					</div>
-				</section>
-				<section class="flex pt-32 pb-28">
-					<div class="max-w-[39.0625rem] text-lg/6">
-						<div class="mb-24">
-							<h6>Pentru designeri de interior si arhitecti</h6>
-							<div class="space-y-5">
-								<p>
-									Comunicare eficientă cu clienții, furnizorii și alte părți
-									implicate în proiect.
-								</p>
-								<p>
-									Oportunități de a intra în legătură cu potențiali clienți,
-									furnizori și alți profesioniști din industrie.
-								</p>
-								<p>
-									Eliminarea provocările de comunicare și interpretările greșite
-									dintre clienți și alte părți interesate ale proiectului
-								</p>
-							</div>
-						</div>
-						<div>
-							<h6>Pentru furnizori de mobilier la comandă</h6>
-							<div class="space-y-5">
-								<p>
-									Oportunitatea de a prezenta portofoliul și pentru a atrage mai
-									mulți potențiali clienți
-								</p>
-								<p>
-									Instrument de colaborare pentru comunicarea cu clienții și
-									designerii pentru a înțelege cerințele și preferințele
-									acestora
-								</p>
-								<p>
-									Găsirea unui echilibru între personalizare și scalabilitate în
-									procesele de producție
-								</p>
-							</div>
-						</div>
-						<button class="button-primary px-5 mt-36 text-xl">
-							Înregistrează-te ca profesionist
-						</button>
-					</div>
-					<div class="ml-40 pt-20">
-						<img src="/src/images/living-room-2.png" alt="living room 2" />
-					</div>
-				</section>
-				<section class="pt-7 pb-40 relative">
-					<img
-						class="absolute -bottom-32 -right-96 -z-10"
-						src="/src/images/Ellipse-bg-contact.png"
-						alt="ellipse bg contact"
-					/>
-					<p class="text-2xl text-gray-300 max-w-[61.875rem]">
-						Răspunsuri la întrebările frecvente despre procesul de proiectare,
-						utilizarea platformei și metodele de colaborare.
-					</p>
-					<div class="mt-20">
-						<ul
-							class="mb-10 border-b-[0.5px] border-green-200 text-gray-300 text-2xl tracking-[1px]"
-						>
-							<li class="py-8 border-t-[0.5px] border-green-200">
-								<p class="font-black mb-4">Cum funcționează ?</p>
-								<p>
-									Platforma noastră vă pune în legătură cu designeri, arhitecți
-									și producători de mobilier la comandă cu experiență. Puteți să
-									răsfoiți portofoliile acestora, să comunicați preferințele
-									dvs. de design și să colaborați la proiectul dvs. de renovare
-									a spațiului rezidențial sau comercial.
-								</p>
-							</li>
-							<li class="py-8 border-t-[0.5px] border-green-200">
-								<p class="font-black mb-4">Cum încep colaborarea ?</p>
-								<p>
-									Pentru a începe, pur și simplu creați un cont pe platforma
-									noastră. Odată ce v-ați înscris, și ai plasat cererea pentru
-									ofertă, puteți explora designerii și arhitecții disponibili,
-									puteți vedea proiectele lor anterioare și puteți începe să
-									colaborați la propriul proiect de design.
-								</p>
-							</li>
-							<li class="py-8 border-t-[0.5px] border-green-200">
-								<p class="font-black mb-4">
-									Care este durata procesului de design/arhitectură/producție
-									mobilier ?
-								</p>
-								<p>
-									Durata proiectului dvs. va depinde de diverși factori,
-									inclusiv complexitatea designului, domeniul de activitate
-									<br />și disponibilitatea designerilor. În timpul procesului
-									de colaborare, puteți discuta despre termeni și alte repere cu
-									profesionistul ales.
-								</p>
-							</li>
-							<li class="py-8 border-t-[0.5px] border-green-200">
-								<p class="font-black mb-4">Cât costă ?</p>
-								<p>
-									Crearea contului si inscrierea proiectului, sunt gratuite.
-									Costul realizării proiectului dumneavoastră va varia în
-									funcție de mărimea și complexitatea amenajării, precum și de
-									tarifele profesioniștilor. Puteți discuta detaliile privind
-									prețurile și considerațiile bugetare direct cu profesioniștii
-									cu care alegeți să lucrați.
-								</p>
-							</li>
-						</ul>
-						<h5 class="mb-6">Ai și alte intrebări?</h5>
-						<p class="text-2xl text-gray-300 font-medium">
-							Contactează-ne pentru asistență suplimentară
-						</p>
-						<button class="button-primary mt-10">Contact</button>
-					</div>
-				</section>
+				</footer>
 			</div>
 		</div>
-		<footer class="bg-brown-500 pt-3.5">
-			<div class="container flex">
-				<div class="pt-6">
-					<p class="max-w-[20.625rem] text-gray-300 text-lg/5 tracking-[1px]">
-						Abonează-te la newsletter-ul nostru, pentru știri despre design și
-						producători din întreaga lume
-					</p>
-					<form class="mt-13 flex flex-wrap max-w-[278px]" action="#">
-						<input
-							required
-							type="email"
-							class="input basis-full"
-							placeholder="Adresa ta de e-mail"
-						/>
-						<div class="basis-full flex justify-end mt-17">
-							<button class="p-3">
-								<img src="/src/images/svg/arrow-right.svg" alt="Send email" />
-							</button>
-						</div>
-					</form>
-				</div>
-				<div class="footer-nav flex flex-wrap max-w-[46.25rem] ml-auto">
-					<ul class="pt-3">
-						<li>Pentru designeri</li>
-						<li>
-							<a href="#">Despre noi</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-					</ul>
-					<ul class="pt-3">
-						<li>Social Media</li>
-						<li>
-							<a href="#">Facebook</a>
-						</li>
-						<li>
-							<a href="#">Instagram</a>
-						</li>
-						<li>
-							<a href="#">Linkedin </a>
-						</li>
-					</ul>
-					<ul class="pt-3">
-						<li>Companie</li>
-						<li>
-							<a href="#">Despre noi</a>
-						</li>
-						<li>
-							<a href="#"> Contact </a>
-						</li>
-						<li>
-							<a href="#">Termeni si condiții</a>
-						</li>
-						<li>
-							<a href="#">Politica de confidențialitate</a>
-						</li>
-						<li>
-							<a href="#">A.N.P.C. - SAL</a>
-						</li>
-						<li>
-							<a href="#">ODR</a>
-						</li>
-						<li>
-							<a href="#">GDPR</a>
-						</li>
-					</ul>
-					<ul>
-						<li>Pentru furnizori</li>
-						<li>
-							<a href="#">Despre noi</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-					</ul>
-					<ul>
-						<li>Noutăți</li>
-						<li>
-							<a href="#">Actualizări </a>
-						</li>
-						<li>
-							<a href="#">Blog</a>
-						</li>
-					</ul>
-					<ul>
-						<li>Resurse</li>
-						<li>
-							<a href="#">Despre noi</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</footer>
 	</body>
+	<script>
+		const tham = document.querySelector('.tham')
+
+		tham.addEventListener('click', () => {
+			tham.classList.toggle('tham-active')
+		})
+	</script>
 </html>

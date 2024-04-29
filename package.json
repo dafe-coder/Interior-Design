@@ -9,7 +9,8 @@
 	"author": "dafe_coder",
 	"license": "ISC",
 	"dependencies": {
-		"tailwind": "^4.0.0"
+		"tailwind": "^4.0.0",
+		"tailwind-hamburgers": "^1.3.5"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.19"
