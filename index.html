@@ -4,13 +4,23 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Interior Design</title>
+		<meta name="description" content="Interior Design Web site" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			rel="preload"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./dist/output3.css" />
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+				rel="stylesheet"
+				type="text/css"
+			/>
+		</noscript>
+		<link rel="stylesheet" href="./dist/output4.css" />
 	</head>
 	<body class="bg-green-600 text-white overflow-x-clip">
 		<div class="flex max-lg:flex-wrap">
@@ -29,13 +39,16 @@
 			</div>
 			<!-- SIDEBAR -->
 			<div
-				class="flex flex-shrink-0 flex-col h-screen sticky top-0 w-64 bg-white text-gray-450 pb-11 max-lg:hidden"
+				id="sidebar"
+				class="flex z-10 flex-shrink-0 flex-col h-screen sticky top-0 w-64 bg-white text-gray-450 pb-11 transition-all duration-500 max-lg:w-full max-lg:h-auto max-lg:max-h-0 max-lg:overflow-hidden max-lg:pb-0"
 			>
-				<div class="flex flex-col pl-9 flex-1 pt-11">
-					<div class="mb-11">
+				<div
+					class="sidebar-body flex flex-col pl-9 flex-1 pt-11 max-lg:pt-0 max-lg:pl-7"
+				>
+					<div class="mb-11 max-lg:hidden">
 						<a href="#" class="font-bold">LOGO HERE</a>
 					</div>
-					<ul class="space-y-5">
+					<ul class="space-y-5 font-bold max-lg:space-y-1.5">
 						<li>
 							<a href="/" class="text-gray-450 text-sm/6">Acasă</a>
 						</li>
@@ -60,9 +73,9 @@
 							<a href="/" class="text-gray-450 text-sm/6">Contact</a>
 						</li>
 					</ul>
-					<div class="mt-auto pt-10 text-sm/6">
+					<div class="mt-auto pt-10 text-sm/6 max-lg:hidden">
 						<p class="flex items-center space-x-2">
-							<img src="/src/images/svg/globe.svg" alt="Globe" />
+							<img loading="lazy" src="/src/images/svg/globe.svg" alt="Globe" />
 							<span class="text-gray-800 font-medium">ro</span>
 						</p>
 						<ul class="space-y-2 font-medium mt-2">
@@ -77,26 +90,38 @@
 						</ul>
 					</div>
 				</div>
-				<div class="flex-shrink-0 pt-10">
+				<div class="flex-shrink-0 pt-10 max-lg:hidden">
 					<ul class="flex justify-center items-center space-x-4">
 						<li>
 							<a href="#">
-								<img src="/src/images/svg/face.svg" alt="facebook" />
+								<img
+									loading="lazy"
+									src="/src/images/svg/face.svg"
+									alt="facebook"
+								/>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="/src/images/svg/inst.svg" alt="instagram" />
+								<img
+									loading="lazy"
+									src="/src/images/svg/inst.svg"
+									alt="instagram"
+								/>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="/src/images/svg/in.svg" alt="in" />
+								<img loading="lazy" src="/src/images/svg/in.svg" alt="in" />
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="/src/images/svg/google.svg" alt="google" />
+								<img
+									loading="lazy"
+									src="/src/images/svg/google.svg"
+									alt="google"
+								/>
 							</a>
 						</li>
 					</ul>
@@ -126,8 +151,9 @@
 									class="hidden relative h-[310px] mt-5 mx-auto max-md:block"
 								>
 									<img
-										class="-z-0 absolute top-1/2 left-[55%] transform -translate-x-1/2 -translate-y-1/2 w-[430px] max-w-[430px]"
-										src="/src/images/kitchen-mob.png"
+										loading="lazy"
+										class="-z-10 absolute top-1/2 left-[55%] transform -translate-x-1/2 -translate-y-1/2 w-[430px] max-w-[430px]"
+										src="/src/images/kitchen-mob.webp"
 										alt="kitchen"
 									/>
 								</div>
@@ -151,7 +177,11 @@
 								</div>
 							</div>
 							<div class="relative -top-20 max-xxl:top-auto max-md:hidden">
-								<img src="/src/images/kitchen.png" alt="kitchen" />
+								<img
+									loading="lazy"
+									src="/src/images/kitchen.webp"
+									alt="kitchen"
+								/>
 							</div>
 						</div>
 					</section>
@@ -167,7 +197,11 @@
 								<p
 									class="flex items-center gap-2.5 py-8 text-2xl font-semibold max-md:text-lg max-sm:pb-2 max-sm:pt-4"
 								>
-									<img src="/src/images/svg/link.svg" alt="link" />
+									<img
+										loading="lazy"
+										src="/src/images/svg/link.svg"
+										alt="link"
+									/>
 									Designeri de top
 								</p>
 								<p class="text-lg max-sm:text-sm">
@@ -179,7 +213,11 @@
 								<p
 									class="flex items-center gap-2.5 py-8 text-2xl font-semibold max-md:text-lg max-sm:pb-2 max-sm:pt-4"
 								>
-									<img src="/src/images/svg/star.svg" alt="star" />
+									<img
+										loading="lazy"
+										src="/src/images/svg/star.svg"
+										alt="star"
+									/>
 									Servicii profesionale
 								</p>
 								<p class="text-lg max-sm:text-sm">
@@ -193,6 +231,7 @@
 									class="flex items-center gap-2.5 py-8 text-2xl font-semibold max-md:text-lg max-sm:pb-2 max-sm:pt-4"
 								>
 									<img
+										loading="lazy"
 										src="/src/images/svg/check-circle.svg"
 										alt="check circle"
 									/>
@@ -209,7 +248,11 @@
 						<div
 							class="max-xxl:basis-1/2 max-xxl:flex-shrink-0 max-xl:flex max-xl:items-center max-md:mx-auto max-md:basis-full"
 						>
-							<img src="/src/images/living-room.png" alt="living room" />
+							<img
+								loading="lazy"
+								src="/src/images/living-room.webp"
+								alt="living room"
+							/>
 						</div>
 						<div
 							class="flex-grow-0 max-w-[47.8125rem] ml-auto pt-28 max-xxl:ml-10 max-xxl:pt-20 max-md:pt-10 max-md:ml-0"
@@ -255,7 +298,11 @@
 						<div
 							class="ml-10 max-xxl:basis-1/2 max-xxl:flex-shrink-0 max-xl:flex max-xl:items-center max-md:order-1 max-md:mx-auto max-md:basis-full"
 						>
-							<img src="/src/images/bedroom.png" alt="bedroom" />
+							<img
+								loading="lazy"
+								src="/src/images/bedroom.webp"
+								alt="bedroom"
+							/>
 						</div>
 					</section>
 					<section>
@@ -271,8 +318,9 @@
 									Adaugă proiectul tău
 								</button>
 								<img
+									loading="lazy"
 									class="absolute bottom-16 -left-[40%]"
-									src="/src/images/ellipse-bg.png"
+									src="/src/images/ellipse-bg.webp"
 									alt="ellipse bg"
 								/>
 							</div>
@@ -388,13 +436,18 @@
 						<div
 							class="ml-40 pt-20 max-xxl:basis-1/2 max-xxl:flex-shrink-0 max-xl:flex max-xl:items-center max-xxl:ml-10 max-xxl:pt-0 max-md:order-1 max-md:mx-auto max-md:basis-full max-md:mb-10"
 						>
-							<img src="/src/images/living-room-2.png" alt="living room 2" />
+							<img
+								loading="lazy"
+								src="/src/images/living-room-2.webp"
+								alt="living room 2"
+							/>
 						</div>
 					</section>
 					<section class="pt-7 pb-40 relative max-sm:pb-10">
 						<img
+							loading="lazy"
 							class="absolute -bottom-32 -right-96 -z-10"
-							src="/src/images/Ellipse-bg-contact.png"
+							src="/src/images/Ellipse-bg-contact.webp"
 							alt="ellipse bg contact"
 						/>
 						<p class="text-2xl text-gray-300 max-w-[61.875rem] max-sm:text-xl">
@@ -484,6 +537,7 @@
 								<div class="basis-full flex justify-end mt-17">
 									<button class="p-3">
 										<img
+											loading="lazy"
 											src="/src/images/svg/arrow-right.svg"
 											alt="Send email"
 										/>
@@ -574,9 +628,16 @@
 	</body>
 	<script>
 		const tham = document.querySelector('.tham')
+		const sidebar = document.getElementById('sidebar')
+		const sidebarBody = document.querySelector('.sidebar-body').offsetHeight + 5
 
 		tham.addEventListener('click', () => {
 			tham.classList.toggle('tham-active')
+			if (!tham.classList.contains('tham-active')) {
+				sidebar.style = ''
+			} else {
+				sidebar.style = `max-height:${sidebarBody}px;height:${sidebarBody}px`
+			}
 		})
 	</script>
 </html>
