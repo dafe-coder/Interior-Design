@@ -53,7 +53,9 @@ module.exports = {
 				200: '#E0EAEB',
 				300: '#B9C4C5',
 				400: '#959595',
+				450: '#525353',
 				500: '#4A4A4A',
+				800: '#242426',
 			},
 			apricot: {
 				400: '#FDD0A1',
@@ -138,6 +140,28 @@ module.exports = {
 						display: 'none',
 						fontSize: '1.25rem',
 						color: theme('colors.gray[500]'),
+					},
+				},
+				'.footer-nav': {
+					'> ul': {
+						flexBasis: '33.333%',
+						borderLeft: `0.5px solid ${theme('colors.gray[400]')}`,
+						marginBottom: '1.875rem',
+						paddingBottom: '1.4375rem',
+						minHeight: '127px',
+						'> *': {
+							marginBottom: '0.3125rem',
+						},
+						'> li': {
+							paddingLeft: '1.25rem',
+							fontSize: '1.125rem',
+							lineHeight: '1.25rem',
+							fontWeight: 500,
+							color: theme('colors.gray[300]'),
+							'> a': {
+								color: theme('colors.gray[500]'),
+							},
+						},
 					},
 				},
 			})

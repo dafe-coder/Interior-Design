@@ -701,6 +701,8 @@ html {
   flex-basis: 33.333%;
   border-left: 0.5px solid #959595;
   margin-bottom: 1.875rem;
+  padding-bottom: 1.4375rem;
+  min-height: 127px;
 }
 
 .footer-nav > ul > * {
@@ -851,6 +853,10 @@ html {
   margin-top: 4.375rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -865,10 +871,6 @@ html {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .block {
@@ -1385,14 +1387,14 @@ html {
   color: rgb(82 83 83 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(36 36 38 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1405,10 +1407,6 @@ html {
 
 .line-through {
   text-decoration-line: line-through;
-}
-
-.decoration-black {
-  text-decoration-color: #000;
 }
 
 .shadow {
