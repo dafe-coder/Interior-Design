@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "npx tailwindcss -i ./main.css -o ./dist/output4.css --watch",
-		"prod": "npx tailwindcss -o ./dist/output4.css --minify"
+		"build": "npx tailwindcss -i ./main.css -o ./dist/output.css --watch",
+		"prod": "npx tailwindcss -o ./dist/output.css --minify"
 	},
 	"author": "dafe_coder",
 	"license": "ISC",
